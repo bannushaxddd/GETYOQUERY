@@ -1,6 +1,6 @@
 # ⚡ GETYOQUERY — AI-Powered SQL Generator & Query Assistant
 
-> From messy ideas to clean SQL in seconds. 
+> From messy ideas to clean SQL in seconds.
 > Built as a full-stack web application with real authentication, database persistence, and live deployment.
 
 ---
