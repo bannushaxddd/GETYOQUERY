@@ -1,6 +1,7 @@
-# ⚡ QueryCraft — AI-Powered SQL Generator
+# ⚡ GETYOQUERY — AI-Powered SQL Generator & Query Assistant
 
-> Turn plain English into production-ready SQL across 8 database dialects.  
+> Think in English. Ship in SQL.
+> From messy ideas to clean SQL in seconds. 
 > Built as a full-stack web application with real authentication, database persistence, and live deployment.
 
 ---
@@ -8,7 +9,6 @@
 ## Live Demo
 
 🌐 **Deployed:** Live On [https://getyoquery.onrender.com]
-📦 **GitHub:** _[Add your repo URL here]_
 
 ---
 
@@ -55,7 +55,7 @@
 ## Project Structure
 
 ```
-querycraft/
+GETYOQUERY/
 ├── server/
 │   ├── index.js            ← Express app, middleware, static serving
 │   ├── db/
@@ -118,11 +118,15 @@ createdb querycraft
 # Connection string: postgresql://localhost/querycraft
 ```
 
-### 3. Get an Anthropic API key
+### 3. Get a Google Gemini API Key
 
-1. Go to [console.anthropic.com](https://console.anthropic.com)
-2. API Keys → Create Key
-3. Copy the key (starts with `sk-ant-...`)
+1. Go to https://aistudio.google.com/app/apikey
+2. Click **Create API Key**
+3. Copy your Gemini API key
+4. Paste it into your `.env` file as:
+
+```env
+GOOGLE_API_KEY=your_api_key_here
 
 ### 4. Configure environment
 
@@ -156,23 +160,30 @@ This creates the `users` and `query_history` tables.
 npm run dev
 ```
 
-- Frontend: [http://localhost:3000](http://localhost:3000)
-- Backend: [http://localhost:3001](http://localhost:3001)
+- Frontend: http://localhost:5173
+- Backend: http://localhost:3001
 
 ---
 
 ## Deployment
 
-### Railway (recommended — free tier available)
+### Render + Supabase (Production)
 
-Railway gives you a Node.js server + managed PostgreSQL in one place.
+The application is deployed using Render for hosting and Supabase PostgreSQL for the database.
+
+### Deploy on Render
+
+1. Push the project to GitHub
+2. Create a new Web Service on Render
+3. Connect your GitHub repository
+4. Configure:
 
 ```bash
-npm install -g @railway/cli
-railway login
-railway init          # link to a new project
-railway up            # deploy
-```
+Build Command:
+npm install && npm run build
+
+Start Command:
+node server/index.js
 
 Add environment variables in Railway dashboard → Variables:
 ```
