@@ -25,9 +25,11 @@ app.use('/api/history', historyRoutes)
 app.use('/api',         generateRoutes)
 
 // Health check — also fixes the "localhost:3001 404" in browser
-app.get('/', (_, res) =>
-  res.json({ name: 'QueryCraft API', status: 'ok', time: new Date().toISOString() })
-)
+if (process.env.NODE_ENV !== 'production') {
+  app.get('/', (_, res) =>
+    res.json({ name: 'QueryCraft API', status: 'ok', time: new Date().toISOString() })
+  )
+}
 app.get('/api/health', (_, res) =>
   res.json({ status: 'ok', time: new Date().toISOString() })
 )
