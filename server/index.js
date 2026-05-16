@@ -75,7 +75,7 @@ async function start() {
 
   app.listen(PORT, () => {
     console.log(`\n⚡  QueryCraft running`)
-    console.log(`   API:      http://${host}:${PORT}`)
+    console.log(`   API running on port ${PORT}`)
     console.log(`   Frontend: http://localhost:5173\n`)
   })
 }
