@@ -1,0 +1,41 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 0 2rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+
+.logoText { color: var(--text); }
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+@media (max-width: 680px) {
+  .main { padding: 0 1rem 4rem; }
+}
