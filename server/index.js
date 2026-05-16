@@ -73,8 +73,7 @@ async function start() {
     process.exit(1)
   }
 
-  const host = process.env.HOST || '127.0.0.1'
-  app.listen(PORT, host, () => {
+  app.listen(PORT, () => {
     console.log(`\n⚡  QueryCraft running`)
     console.log(`   API:      http://${host}:${PORT}`)
     console.log(`   Frontend: http://localhost:5173\n`)
