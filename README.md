@@ -7,7 +7,7 @@
 
 ## Live Demo
 
-🌐 **Deployed:** _[Add your Railway/Render URL here after deployment]_  
+🌐 **Deployed:** Live On [https://getyoquery.onrender.com]
 📦 **GitHub:** _[Add your repo URL here]_
 
 ---
